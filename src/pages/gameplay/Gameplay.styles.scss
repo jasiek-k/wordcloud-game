@@ -1,0 +1,50 @@
+.gameplay {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+    border: 1px solid black;
+
+    &__word {
+      width: 25%;
+      position: relative;
+
+      &.correct-answer > &--item,
+      &.correct-answer {
+        color: green;
+      }
+
+      &.wrong-answer > &--item,
+      &.wrong-answer {
+        color: red;
+      }
+
+      &--item {
+        width: 100%;
+        padding: 1rem;
+        border: 0;
+        background-color: transparent;
+        color: black;
+
+        &:hover:not(.isChecked) {
+          cursor: pointer;
+        }
+      }
+
+      &--subcaption {
+        position: absolute;
+        font-size: 0.75rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.isSelected {
+  font-weight: bold;
+}
